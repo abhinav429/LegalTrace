@@ -4,10 +4,6 @@
 
 Ship a production build to [Vercel](https://vercel.com) or run it locally. Built with Next.js 15, PostgreSQL + pgvector, Prisma, the Vercel AI SDK, and OpenAI embeddings and chat.
 
-![Ingest](./public/demo/ingest-v2.svg)
-![Search](./public/demo/search-filtered-v2.svg)
-![Chat](./public/demo/chat-citations-v2.svg)
-
 ---
 
 ## Features
@@ -41,7 +37,6 @@ src/
 │   ├── legal-metadata.ts
 │   └── pdf-extract.ts
 prisma/                       # Schema & migrations
-public/demo/                  # README screenshots (SVG)
 ```
 
 ---
