@@ -76,7 +76,6 @@ prisma/                       # Schema & migrations
    Optional:
 
    - `NEXT_PUBLIC_APP_URL` — e.g. `http://localhost:3000` locally, or your production URL on Vercel (correct Open Graph / canonical URLs).
-   - `NEXT_PUBLIC_WORKSPACE_IN_PRODUCTION=true` — show the full workspace on a production deploy (see Vercel section below).
    - `OPENAI_BASE_URL` — compatible API base if not using OpenAI directly.
 
    Never commit real secrets: keep `.env` local only (see `.gitignore`).
@@ -106,7 +105,7 @@ prisma/                       # Schema & migrations
 ## Deploying on Vercel
 
 1. Import the Git repository in [Vercel](https://vercel.com/new).
-2. **Environment variables** — Mirror `.env.example` (database, `OPENAI_API_KEY`, and optionally `NEXT_PUBLIC_APP_URL` for your production domain). To show the full workspace (Ingest, Sources, Search, Chat) on the deployed site, set **`NEXT_PUBLIC_WORKSPACE_IN_PRODUCTION=true`** and redeploy; otherwise `/workspace` shows the demo-only notice.
+2. **Environment variables** — Mirror `.env.example` (database, `OPENAI_API_KEY`, and optionally `NEXT_PUBLIC_APP_URL` for your production domain).
 3. **Build** — Default `npm run build`. Set **Install Command** to `npm install --legacy-peer-deps` if dependency resolution fails.
 4. **Database** — Use hosted Postgres with pgvector; run `npx prisma migrate deploy` against production when you first connect.
 5. **PDF ingestion** — Server-side extraction uses `pdf-parse`; `next.config.ts` lists `pdf-parse` / `pdfjs-dist` under `serverExternalPackages` for stable server bundles.
