@@ -108,4 +108,4 @@ prisma/                       # Schema & migrations
 2. **Environment variables** — Mirror `.env.example` (database, `OPENAI_API_KEY`, and optionally `NEXT_PUBLIC_APP_URL` for your production domain).
 3. **Build** — Default `npm run build`. Set **Install Command** to `npm install --legacy-peer-deps` if dependency resolution fails.
 4. **Database** — Use hosted Postgres with pgvector; run `npx prisma migrate deploy` against production when you first connect.
-5. **PDF ingestion** — Server-side extraction uses `pdf-parse`; `next.config.ts` lists `pdf-parse` / `pdfjs-dist` under `serverExternalPackages` for stable server bundles.
+5. **PDF ingestion** — Server-side extraction uses `pdf-parse` (v1, Node-friendly); `next.config.ts` lists `pdf-parse` under `serverExternalPackages` for stable server bundles.
